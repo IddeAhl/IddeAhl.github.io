@@ -1,21 +1,107 @@
 <html>
+<head>
+<script>
+    
+ function openPage(pageName, elmnt, color) {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Remove the background color of all tablinks/buttons
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+
+    // Show the specific tab content
+    document.getElementById(pageName).style.display = "block";
+
+    // Add the specific color to the button used to open the tab content
+    elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();   
+      
+</script>
 <style>
+    
+    /* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: monospace;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: gray;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+    font-size: 15px
+}
+
+#Välkommen {background-color: gray;}
+#Spel {background-color: gray;}
+#Om {background-color: gray;}
+    
     .title-text {
-        color: #5495ff;
+        color: black;
         font-family: monospace
     }
     
     .main-text {
-        color: #5495ff;
+        color: black;
         font-family: monospace
     }
     
     .body {
-        background-color: #b7b7b7;
+        background-color: gray;
     }
 </style>
+</head>
 
-<h1 class="title-text">Välkommen till min webbsida</h1>
+
+<button class="tablink" onclick="openPage('välkommen', this, 'gray')">Välkommen</button>
+<button class="tablink" onclick="openPage('spel', this, 'gray')">Spel</button>
+<button class="tablink" onclick="openPage('om', this, 'gray')">Om</button>
     
-<h2 class="main-text">Hej, jag heter Idde. Det här är min första webbsida, den är programmerad i html JavaScript.</h2>
+<div id="Välkommen" class="tabcontent">
+    <h3>Välkommen</h3>
+    <p class="main-text">Välkommen till min webbsida</p>
+</div>
+    
+<div id="Spel" class="tabcontent">
+    <h3>Spel</h3>
+    <p>kjawjd</p>
+</div>
+    
+<div id="Om" class="tabcontent">
+    <h3>Om</h3>
+    <p>kjawjd</p>
+</div>
+    
+    
+
 </html>
