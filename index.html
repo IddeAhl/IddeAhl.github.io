@@ -1,8 +1,9 @@
+<!Doctype html>
 <html>
-<head>
+
 <script>
-    
- function openPage(pageName, elmnt, color) {
+
+function openPage(pageName, elmnt, color) {
     // Hide all elements with class="tabcontent" by default */
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -24,16 +25,17 @@
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();   
-      
+document.getElementById("defaultOpen").click();
+
+
 </script>
+
 <style>
-    
-    /* Set height of body and the document to 100% to enable "full page tabs" */
+/* Set height of body and the document to 100% to enable "full page tabs" */
 body, html {
   height: 100%;
   margin: 0;
-  font-family: monospace;
+  font-family: Arial;
 }
 
 /* Style tab links */
@@ -41,7 +43,8 @@ body, html {
   background-color: #555;
   color: white;
   float: left;
-  border: none;
+ 
+   border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
@@ -51,57 +54,49 @@ body, html {
 
 .tablink:hover {
   background-color: #777;
-}
+    }
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  color: gray;
+  color: white;
   display: none;
   padding: 100px 20px;
   height: 100%;
-    font-size: 15px
 }
 
-#Välkommen {background-color: gray;}
-#Spel {background-color: gray;}
-#Om {background-color: gray;}
-    
-    .title-text {
-        color: black;
-        font-family: monospace
-    }
-    
-    .main-text {
-        color: black;
-        font-family: monospace
-    }
-    
-    .body {
-        background-color: gray;
-    }
+#Välkommen {background-color: red;}
+#Spel {background-color: green;}
+#Kontakt {background-color: blue;}
+#Om {background-color: orange;}
+
+
 </style>
-</head>
+<button class="tablink" onclick="openPage('Välkommen', this, 'red')">Välkommen</button>
+<button class="tablink" onclick="openPage('Spel', this, 'green')" id="defaultOpen">Spel</button>
+<button class="tablink" onclick="openPage('Kontakt', this, 'blue')">Kontakt</button>
+<button class="tablink" onclick="openPage('Om', this, 'orange')">Om</button>
 
-
-<button class="tablink" onclick="openPage('välkommen', this, 'gray')">Välkommen</button>
-<button class="tablink" onclick="openPage('spel', this, 'gray')">Spel</button>
-<button class="tablink" onclick="openPage('om', this, 'gray')">Om</button>
-    
 <div id="Välkommen" class="tabcontent">
-    <h3>Välkommen</h3>
-    <p class="main-text">Välkommen till min webbsida</p>
+  <h3>Välkommen</h3>
+  <p>Välkommen till min webbsida</p>
+  <img src="https://images-mm.s3.amazonaws.com/Deadpool_Logo_Patch1_POP.jpg" alt="bilden är trasig tyvärrrr" width="200px" height="200px">
+    <p>Det här är deadpool jag gillar deadpool    (:</p>
+
 </div>
-    
+
 <div id="Spel" class="tabcontent">
-    <h3>Spel</h3>
-    <p>kjawjd</p>
+  <h3>Spel</h3>
+  <p>Här kommer jag lägga in spel.</p> 
 </div>
-    
+
+<div id="Kontakt" class="tabcontent">
+  <h3>Kontakt</h3>
+  <p>Här är min mailadress iddeahl4@gmail.com</p>
+</div>
+
 <div id="Om" class="tabcontent">
     <h3>Om</h3>
-    <p>kjawjd</p>
+  <p>Här kommer jag skriva saker om mig.</p>
 </div>
-    
-    
 
 </html>
