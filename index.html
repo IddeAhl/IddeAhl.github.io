@@ -164,7 +164,7 @@ function loop() {
   context.fillStyle = 'red';
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
   // draw snake
-  context.fillStyle = 'yellow';
+  context.fillStyle = 'black';
   snake.cells.forEach(function(cell, index) {
     context.fillRect(cell.x, cell.y, grid-1, grid-1);
     // snake ate apple
